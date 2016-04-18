@@ -1,0 +1,6 @@
+#-g for debug info
+echo Assembling...
+nasm -f elf64 -l $1.l $1.asm 
+echo Linking...
+ld -s -o $1 $1.o
+echo Done!
